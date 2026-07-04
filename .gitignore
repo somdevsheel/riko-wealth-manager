@@ -1,8 +1,36 @@
+# Python / backend
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
+chroma_store/
+
+# Contains a hardcoded database password — keep local-only, never push
+backend/docker-compose.yml
+
+# Environment files (never commit secrets/local config; .env.example files
+# are templates and are matched separately, so they stay tracked)
 .env
+.env.local
+
+# Node / frontend
 node_modules/
 .expo/
 dist/
-chroma_store/
+web-build/
+expo-env.d.ts
+*.tsbuildinfo
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Generated native projects (created by `expo prebuild`)
+frontend/ios/
+frontend/android/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
